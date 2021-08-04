@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": "wf",
+      "name": "Workflow",
+      "price": 199.99,
+      "avatarUrl": "https://static.thenounproject.com/png/2500651-200.png",
+      "description": "An excellent choice for supercharging your organization workflow activity. Make your life easier with Workflow."
+    },
+    {
+      "id": "docgen",
+      "name": "Document Generation",
+      "price": 9.99,
+      "avatarUrl": "https://static.thenounproject.com/png/392828-200.png",
+      "description": "An excellent choice for supercharging your organization document generation activity. Make your life easier with Document Generation."
+    },
+    {
+      "id": "form",
+      "name": "Form",
+      "price": 99.99,
+      "avatarUrl": "https://static.thenounproject.com/png/709938-200.png",
+      "description": "An excellent choice for supercharging your organization forms activity. Make your life easier with Form."
+    }
+  ]
+}

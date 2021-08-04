@@ -1,0 +1,32 @@
+<div>
+  <mat-card class="mx-auto mt-8" style="max-width: 400px">
+    <mat-card-header>
+      <mat-card-title>Order Details</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content class="mt-3">
+      <mat-list role="list" *ngIf="cart.products.length">
+        <mat-list-item role="listitem" *ngFor="let p of cart.products">
+          <span class="flex-1">{{ p.product.name }}</span>
+          <span class="font-medium">{{ p.quantity }}</span>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+      <div *ngIf="!cart.products.length" class="font-medium text-xl">
+        Your cart is empty!
+      </div>
+    </mat-card-content>
+    <div *ngIf="cart.products.length" class="my-6">
+      <mat-form-field appearance="standard" class="mr-10">
+        <mat-label>Voucher Code</mat-label>
+        <input matInput placeholder="E.g. FF9543D1" #searchInput />
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click)="applyVoucherCode(cart)">
+        Apply
+      </button>
+    </div>
+    <div *ngIf="cart.products.length" class="self-center text-3xl font-medium">
+      Total: ${{ cart.totalPrice.toFixed(2) }}
+    </div>
+  </mat-card>
+</div>

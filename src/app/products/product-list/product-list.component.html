@@ -1,0 +1,22 @@
+<div>
+  <div class="sm:flex">
+    <mat-card
+      class="xs:mb-4 sm:mr-4 cursor-pointer flex-1 hover:bg-gray-100"
+      *ngFor="let product of products"
+    >
+      <mat-card-header>
+        <img mat-card-avatar [src]="product.avatarUrl" />
+        <mat-card-title>{{ product.name }}</mat-card-title>
+        <mat-card-subtitle>Product</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>{{ product.description }}</mat-card-content>
+      <div class="self-center text-3xl font-medium">${{ product.price }}</div>
+      <mat-card-actions>
+        <button class="toolbar_menu-item" mat-button color="primary" (click)="addToCart(product)">
+          <mat-icon>add_shopping_cart</mat-icon>
+          <span class="ml-2">Add to Cart</span>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
